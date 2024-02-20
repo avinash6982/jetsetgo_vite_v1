@@ -1,15 +1,15 @@
 import { Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Flights from "./pages/Flights";
-
-import "react-toastify/dist/ReactToastify.css";
 import FlightExplore from "./pages/FlightExplore";
 import PassengerInfo from "./pages/PassengerInfo";
 import SeatSelect from "./pages/SeatSelect";
 import Payment from "./pages/Payment";
+import Confirm from "./pages/Confirm";
 
 const App = () => {
   return (
@@ -22,6 +22,7 @@ const App = () => {
           <Route path="/passenger-info" element={<PassengerInfo />} />
           <Route path="/seat-selection" element={<SeatSelect />} />
           <Route path="/payment" element={<Payment />} />
+          <Route path="/confirm" element={<Confirm />} />
         </Routes>
         <Footer />
         <ToastContainer
