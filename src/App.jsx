@@ -7,6 +7,7 @@ import Flights from "./pages/Flights";
 
 import "react-toastify/dist/ReactToastify.css";
 import FlightExplore from "./pages/FlightExplore";
+import PassengerInfo from "./pages/PassengerInfo";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Flights />} />
           <Route path="/explore" element={<FlightExplore />} />
+          <Route path="/passenger-info" element={<PassengerInfo />} />
         </Routes>
         <Footer />
         <ToastContainer

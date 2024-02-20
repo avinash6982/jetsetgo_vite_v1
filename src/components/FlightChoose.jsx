@@ -128,7 +128,7 @@ const FlightChoose = () => {
             <PriceDetails />
             <Link to="/passenger-info" className="mt-5">
               <button className="text-[#605DEC] border-2 border-[#605DEC] py-2 px-3 rounded hover:bg-[#605DEC] hover:text-white transition-all duration-200">
-                Save & Close
+                Proceed
               </button>
             </Link>
           </div>
