@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import Flights from "./pages/Flights";
 
 import "react-toastify/dist/ReactToastify.css";
+import FlightExplore from "./pages/FlightExplore";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
         <Navbar />
         <Routes>
           <Route path="/" element={<Flights />} />
+          <Route path="/explore" element={<FlightExplore />} />
         </Routes>
         <Footer />
         <ToastContainer
