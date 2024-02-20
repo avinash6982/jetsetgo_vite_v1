@@ -9,6 +9,7 @@ import "react-toastify/dist/ReactToastify.css";
 import FlightExplore from "./pages/FlightExplore";
 import PassengerInfo from "./pages/PassengerInfo";
 import SeatSelect from "./pages/SeatSelect";
+import Payment from "./pages/Payment";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
           <Route path="/explore" element={<FlightExplore />} />
           <Route path="/passenger-info" element={<PassengerInfo />} />
           <Route path="/seat-selection" element={<SeatSelect />} />
+          <Route path="/payment" element={<Payment />} />
         </Routes>
         <Footer />
         <ToastContainer
