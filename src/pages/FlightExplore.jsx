@@ -1,11 +1,13 @@
 import { useSearchParams } from "react-router-dom";
+import { useLayoutEffect, useState } from "react";
 
 import FlightChoose from "../components/FlightChoose";
 import SelectDetails from "../components/SelectDetails";
-import { useLayoutEffect } from "react";
+import { getRequest } from "../api";
 
 const FlightExplore = () => {
   const [searchParams] = useSearchParams();
+  const [searchResults, setSearchResults] = useState([]);
 
   const getParamsObject = () => {
     const paramsObject = {};
@@ -15,8 +17,19 @@ const FlightExplore = () => {
     return paramsObject;
   };
 
+  function getFlights() {
+    getRequest()
+      .then((res) => {
+        if (res.data.message === "Success")
+          setSearchResults(res.data.data.result);
+      })
+      .catch((err) => {
+        console.warn(err);
+      });
+  }
+
   useLayoutEffect(() => {
-    console.warn(getParamsObject());
+    getFlights(getParamsObject());
   }, []);
 
   return (
@@ -26,7 +39,7 @@ const FlightExplore = () => {
           <SelectDetails />
         </div>
         <div className="mt-16">
-          <FlightChoose />
+          <FlightChoose flightsData={searchResults} />
         </div>
       </div>
     </>

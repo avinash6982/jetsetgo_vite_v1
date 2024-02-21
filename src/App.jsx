@@ -1,6 +1,5 @@
 import { Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
@@ -10,6 +9,9 @@ import PassengerInfo from "./pages/PassengerInfo";
 import SeatSelect from "./pages/SeatSelect";
 import Payment from "./pages/Payment";
 import Confirm from "./pages/Confirm";
+
+import "./App.css";
+import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
   return (

@@ -1,7 +1,6 @@
 import FlightDeals from "../components/FlightDeals";
 import Hero from "../components/Hero";
 import Testimonials from "../components/Testimonials";
-
 const Flights = () => {
   return (
     <>
