@@ -18,7 +18,7 @@ const Signin = ({ signin, setSignin }) => {
     if (email.trim() !== "" && password.trim() !== "") {
       if (check1 && check2) {
         toast.success("Sign in successful");
-        navigate("/");
+        navigate("/home");
         setSignin(false);
       } else {
         toast.warning("Please check the checkboxes");

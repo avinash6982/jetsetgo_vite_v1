@@ -37,7 +37,7 @@ const App = () => {
       <div className="font-Nunito overflow-hidden max-w-[1440px] mx-auto">
         <Navbar />
         <Routes>
-          <Route path="/" element={<Flights />} />
+          <Route path="/home" element={<Flights />} />
           <Route path="/explore" element={<FlightExplore />} />
           <Route path="/passenger-info" element={<PassengerInfo />} />
           <Route path="/seat-selection" element={<SeatSelect />} />

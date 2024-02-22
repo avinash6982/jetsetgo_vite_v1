@@ -8,7 +8,7 @@ import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
 import { suggestions } from "../data/constant";
 import { departure, arrival, calendar, person } from "../assets/icons";
-import createUrlParamsFromObject from "../utils/createUrlParamsFromObject";
+import createUrlParamsFromObject from "../utils/createURLParamsFromObject";
 
 const AutoSuggest = () => {
   const [input, setInput] = useState("");

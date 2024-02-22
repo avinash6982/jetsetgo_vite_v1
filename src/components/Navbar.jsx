@@ -38,9 +38,9 @@ const Navbar = () => {
             {toggle && (
               <ul className="absolute w-32 z-10 h-fit bg-[#FFFFFF] shadow-xl top-14 left-0 text-[#7C8DB0] flex flex-col gap-2 items-start p-4 scaleUp">
                 <Link
-                  to="/"
+                  to="/home"
                   className={`text-base  hover:text-[#605DEC] transition-all duration-200 ${
-                    loactionPath("/") && "text-[#605DEC]"
+                    loactionPath("/home") && "text-[#605DEC]"
                   }`}
                 >
                   <li>Flights</li>
@@ -48,7 +48,7 @@ const Navbar = () => {
               </ul>
             )}
           </div>{" "}
-          <h4 onClick={() => navigate("/")} className="gradient-text link">
+          <h4 onClick={() => navigate("/home")} className="gradient-text link">
             JetSetGo
           </h4>
           {/* <img
@@ -70,9 +70,9 @@ const Navbar = () => {
         <div className="hidden md:flex items-center space-x-8">
           <ul className="hidden md:flex items-center space-x-8 text-[#7C8DB0]">
             <Link
-              to="/"
+              to="/home"
               className={`text-base  hover:text-[#605DEC] transition-all duration-200 ${
-                loactionPath("/") && "text-[#605DEC]"
+                loactionPath("/home") && "text-[#605DEC]"
               }`}
             >
               <li>Flights</li>
