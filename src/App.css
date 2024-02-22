@@ -1,16 +1,30 @@
 .pagination {
     display: flex;
     .page-item {
-        padding: 5px
+        padding: 5px;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
     .disabled {
-        background-color: lightgray;
+        color: lightgray;
         cursor: not-allowed;
         .page-link  {
             cursor: not-allowed;}
     }
     .active {
-        background-color:rgb(96 93 236);
+        background-color:rgb(96 93 236); 
         color: white
     }
+}
+
+.gradient-text {
+    font-size:  24px; /* Adjust the font size as needed */
+    font-weight: bold; /* Make the text thick */
+    background: linear-gradient(to right, #007BFF, rgb(96, 93, 236)); /* Blue gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.link {
+    cursor: pointer;
 }

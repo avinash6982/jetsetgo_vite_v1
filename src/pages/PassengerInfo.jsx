@@ -38,11 +38,11 @@ const PassengerInfo = () => {
     numbag: 1,
   });
 
-  const handleBagNumber = (name, oparetion) => {
+  const handleBagNumber = (name, operation) => {
     setNumOfBag((prev) => {
       return {
         ...prev,
-        [name]: oparetion === "i" ? numOfBag[name] + 1 : numOfBag[name] - 1,
+        [name]: operation === "i" ? numOfBag[name] + 1 : numOfBag[name] - 1,
       };
     });
   };

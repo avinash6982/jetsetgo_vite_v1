@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom";
+import { useLayoutEffect } from "react";
 import { ToastContainer } from "react-toastify";
 
 import Footer from "./components/Footer";
@@ -9,11 +10,28 @@ import PassengerInfo from "./pages/PassengerInfo";
 import SeatSelect from "./pages/SeatSelect";
 import Payment from "./pages/Payment";
 import Confirm from "./pages/Confirm";
+import getArilinesFromResults from "./utils/getAirlinesFromResults";
+import getAirportsFromResults from "./utils/getAirlinesFromResults";
+import { getRequest } from "./api";
 
-import "./App.css";
 import "react-toastify/dist/ReactToastify.css";
+import "./App.css";
 
 const App = () => {
+  function loadInitialData() {
+    getRequest().then((res) => {
+      if (res.data.message === "Success") {
+        let airlinesArr = getArilinesFromResults(res.data.data.result);
+        let airportsArr = getAirportsFromResults(res.data.data.result);
+        console.warn(airlinesArr, airportsArr);
+      }
+    });
+  }
+
+  useLayoutEffect(() => {
+    loadInitialData();
+  }, []);
+
   return (
     <>
       <div className="font-Nunito overflow-hidden max-w-[1440px] mx-auto">

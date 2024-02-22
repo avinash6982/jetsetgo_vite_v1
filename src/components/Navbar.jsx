@@ -1,12 +1,12 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { MdOutlineClose } from "react-icons/md";
 import { BiMenuAltLeft } from "react-icons/bi";
 
-import { tripma } from "../assets/logo";
 import Signin from "../container/Signin";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const location = useLocation();
   const [toggle, setToggle] = useState(false);
   const [signin, setSignin] = useState(false);
@@ -47,12 +47,14 @@ const Navbar = () => {
                 </Link>
               </ul>
             )}
-          </div>
-          <img
-            src={tripma}
+          </div>{" "}
+          <h4 onClick={() => navigate("/")} className="gradient-text link">
+            JetSetGo
+          </h4>
+          {/* <img
             alt="JetSetGo"
             className="md:w-[107px] md:h-[30px] w-[90px] h-[25px] object-contain"
-          />
+          /> */}
         </div>
         <div className="">
           <button

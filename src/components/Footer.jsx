@@ -68,7 +68,7 @@ const Footer = () => {
             />
           </div>
           <p className="text-[#7C8DB0] text-sm sm:text-base">
-            &copy; 2023 JetSetGo
+            &copy; 2024 JetSetGo
           </p>
         </div>
       </div>

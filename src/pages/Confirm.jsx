@@ -46,7 +46,7 @@ const Confirm = () => {
             </h1>
             <div className="w-full flex flex-col items-start gap-2 ">
               <p className="text-[#7C8DB0] text-base sm:text-lg font-semibold">
-                Departing February 25th, 2023
+                Departing February 25th, 2024
               </p>
               <div className="w-full cursor-pointer border-[1px] border-[#E9E8FC] hover:bg-[#F6F6FE] transition-all duration-300 focus:bg-[#F6F6FE]">
                 <FlightCard
@@ -66,7 +66,7 @@ const Confirm = () => {
             </div>
             <div className="w-full flex flex-col items-start gap-2 mt-8">
               <p className="text-[#7C8DB0] text-base sm:text-lg font-semibold">
-                Arriving March 21st, 2023
+                Arriving March 21st, 2024
               </p>
               <div className="w-full cursor-pointer border-[1px] border-[#E9E8FC] hover:bg-[#F6F6FE] transition-all duration-300 focus:bg-[#F6F6FE]">
                 <FlightCard

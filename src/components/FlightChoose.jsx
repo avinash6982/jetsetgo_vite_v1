@@ -21,12 +21,15 @@ function Items({ currentItems, setSelectedFlight }) {
           >
             <FlightCard
               img={hawaiian}
-              duration="16h 45m"
-              name="Hawaiian Airlines"
-              time="7:00AM - 4:15PM"
-              stop="1 stop"
-              hnl="2h 45m in HNL"
-              price="$624"
+              duration={item.displayData?.totalDuration}
+              name={item.displayData?.airlines[0]?.airlineName}
+              time={
+                item?.displayData?.source?.depTime +
+                item?.displayData?.destination?.arrTime
+              }
+              stop={item.displayData?.stopInfo}
+              hnl={item.displayData?.stopInfo !== "Non stop" ? "1 Hour" : ""}
+              price={"$" + item?.fare}
               trip="round trip"
             />
           </div>
@@ -34,13 +37,14 @@ function Items({ currentItems, setSelectedFlight }) {
     </>
   );
 }
+
 Items.propTypes = {
   currentItems: PropTypes.array,
   setSelectedFlight: PropTypes.func,
 };
 
 const FlightChoose = ({ flightsData }) => {
-  const itemsPerPage = 5;
+  const itemsPerPage = 10;
   const [priceShown, setPriceShow] = useState(true);
   const [itemOffset, setItemOffset] = useState(0);
   const endOffset = itemOffset + itemsPerPage;
@@ -52,14 +56,13 @@ const FlightChoose = ({ flightsData }) => {
     setItemOffset(newOffset);
   };
 
-  const setSelectedFlight = (id) => {
-    console.warn(id);
-    setPriceShow(true);
+  const setSelectedFlight = (item) => {
+    console.warn(item);
+    setPriceShow(false);
   };
 
   return (
     <>
-      {console.warn(flightsData[0])}
       <div className="flex lg:flex-row flex-col items-start justify-between gap-16 ">
         <div className="w-full lg:w-[872px] h-full flex flex-col gap-5">
           <div className="flex items-start justify-start">
