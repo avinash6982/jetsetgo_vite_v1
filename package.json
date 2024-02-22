@@ -1,6 +1,7 @@
 {
   "name": "jetsetgo_vite_v1",
-  "private": true,
+  "private": false,
+  "homepage": "https://avinash6982.github.io/jetsetgo_vite_v1",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
